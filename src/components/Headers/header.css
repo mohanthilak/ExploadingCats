@@ -1,0 +1,30 @@
+.go-span{
+    color: #01ccff;
+}
+
+.header-brand h1{
+    font-weight: 1000;
+    margin: 5px 0;
+    color: #070F2B;
+}
+
+.header-component{
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-menu{
+    cursor: pointer;
+    display: none;
+}
+@media only screen and (max-width: 1000px){
+    .header-menu{
+        display: block;
+    }
+
+    .header-component{
+        padding: 0 30px;
+    }
+}

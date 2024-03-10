@@ -1,0 +1,99 @@
+.game-container {
+    /* background-color: aqua; */
+    display: flex;
+    /* flex-direction: column; */
+    height: 95%;
+    padding: 10px 0;
+    width: 70%;
+    justify-content: center;
+
+}
+
+.cards-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:-10px;
+    /* left: 60px; */
+}
+.button-div{
+  /* position: relative;
+  right:80px; */
+  align-self: end;
+  margin-top: 20px;
+  height: fit-content;
+}
+.button-div button{
+  background-color: #124076;
+  width: 10rem;
+  height: 3rem;
+  font-size: 20px;
+  font-weight: 1000;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.game-status-div{
+  position: relative;
+  height: fit-content;
+  z-index: 1000;
+  left: 80px;
+}
+
+.card-div:nth-child(1) {
+    z-index: 5;
+    transform: translateX(80px) translateY(-20px);
+  }
+  
+  .card-div:nth-child(2) {
+    z-index: 4;
+    transform: translateX(40px) translateY(-10px);
+  }
+  
+  .card-div:nth-child(3) {
+    z-index: 3;
+    transform: translateX(0px) translateY(0px);
+  }
+  .card-div:nth-child(4) {
+    z-index: 2;
+    transform: translateX(-40px) translateY(10px);
+  }
+  .card-div:nth-child(5) {
+    z-index: 1;
+    transform: translateX(-80px) translateY(20px);
+  }
+
+  @media only screen and (max-width: 1000px){
+    .game-container{
+      width: 100%;
+    }
+    .cards-container{
+      left:145px;
+    }
+    .card-div:nth-child(1) {
+      z-index: 5;
+      transform: translateX(40px) translateY(-20px);
+    }
+    
+    .card-div:nth-child(2) {
+      z-index: 4;
+      transform: translateX(20px) translateY(-10px);
+    }
+    
+    .card-div:nth-child(3) {
+      z-index: 3;
+      transform: translateX(0px) translateY(0px);
+    }
+    .card-div:nth-child(4) {
+      z-index: 2;
+      transform: translateX(-20px) translateY(10px);
+    }
+    .card-div:nth-child(5) {
+      z-index: 1;
+      transform: translateX(-40px) translateY(20px);
+    }
+}

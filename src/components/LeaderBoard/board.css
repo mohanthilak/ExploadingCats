@@ -1,0 +1,91 @@
+.board-container{
+    width: 30%;
+    display: block;
+}
+.board-container .board{
+
+    background-color: #70a3bd;
+    color: white;
+    padding: 10px 0;
+    border-radius: 30px;
+    height: fit-content;
+}
+.board-title {
+    border-bottom:4px solid white;
+    position: sticky;
+}
+.board-title h1{
+    text-align: center;
+    font-size: 32px;
+    margin: 0px;
+    padding: 0;
+}
+
+.board-list{
+    display: flex;
+    justify-content: center;
+}
+
+.board-list ul {
+    /* background-color: brown; */
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    width: 90%;
+    overflow-y: scroll;
+    padding-left: 0;
+}
+
+.board-list ul li {
+    width: 100%;
+    border-bottom: 2px solid white;
+}
+
+.board-player h4{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px;
+} 
+.board-list-ul::-webkit-scrollbar {
+    display: none;
+  }
+  .board-list-ul::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Change track color */
+  }
+  
+  /* Handle */
+  .board-list-ul::-webkit-scrollbar-thumb {
+    background: #888; /* Change thumb color */
+  }
+  
+  /* Handle on hover */
+  .board-list-ul::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Change thumb color on hover */
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .board-list-ul {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+@media only screen and (max-width: 1000px){
+    .board-container{
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        height: 400px;
+        width: 90%;
+        z-index: 100;
+    }
+
+    .board-list-ul {
+        height: 300px;
+        /* background-color: cadetblue; */
+        overflow-y: scroll;
+    }
+}
