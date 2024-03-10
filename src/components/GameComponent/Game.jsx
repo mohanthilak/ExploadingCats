@@ -17,7 +17,7 @@ const Game = ({username}) => {
     e.preventDefault();
     if(!username) return;
     setGameStatus("")
-    axios.get(`http://localhost:8000/game/draw-card/${username}`).then(res=>{
+    axios.get(`https://gocats.onrender.com/game/draw-card/${username}`).then(res=>{
     console.log(res.data)
     if(res.data.status != "playing"){
       setGameOn(false)
@@ -35,7 +35,7 @@ const Game = ({username}) => {
     setGameStatus("")
     setGameOn(true)
     if(!username) return;
-    axios.get(`http://localhost:8000/game/start/${username}`).then(res=>{
+    axios.get(`https://gocats.onrender.com/game/start/${username}`).then(res=>{
       if(res.data.status != "winner"){
         const arr = res.data.cards.reverse()
       setCards([...arr])

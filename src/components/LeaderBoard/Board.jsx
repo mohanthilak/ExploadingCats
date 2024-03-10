@@ -6,7 +6,7 @@ const Board = ({menuActive, username}) => {
   const [socket, setSocket] = useState(null);
   const [players, setPlayers] = useState([])
   useEffect(()=>{
-    axios.get('http://localhost:8000/game/leader-board').then(res=>{
+    axios.get('https://gocats.onrender.com/game/leader-board').then(res=>{
       console.log(res.data)
       if(res.data?.length>0){
         setPlayers([...res.data])
@@ -34,7 +34,8 @@ const Board = ({menuActive, username}) => {
       if(!username) return
       console.log("}}}}}}}}}}}}}}}}}}}}}}}")
         // Initialize WebSocket connection
-        const ws = new WebSocket(`ws://localhost:8000/ws/${username}`)
+        // https://gocats.onrender.com/
+        const ws = new WebSocket(`ws://gocats.onrender.com//ws/${username}`)
                 // const ws = new WebSocketClient();
 
         // Handle WebSocket events

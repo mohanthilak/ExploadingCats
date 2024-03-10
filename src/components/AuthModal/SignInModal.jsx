@@ -6,7 +6,7 @@ const SignInModal = ({isOpen, onClose}) => {
     const [password, setPassword] = useState("")
     const onSubmit = (e)=>{
         e.preventDefault();
-        axios.post("http://localhost:8000/user/login", {
+        axios.post("https://gocats.onrender.com/user/login", {
             username, password
         }).then(res=>{
             setUsername("")
