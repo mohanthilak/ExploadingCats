@@ -35,7 +35,7 @@ const Board = ({menuActive, username}) => {
       console.log("}}}}}}}}}}}}}}}}}}}}}}}")
         // Initialize WebSocket connection
         // https://gocats.onrender.com/
-        const ws = new WebSocket(`ws://gocats.onrender.com//ws/${username}`)
+        const ws = new WebSocket(`wss://gocats.onrender.com//ws/${username}`)
                 // const ws = new WebSocketClient();
 
         // Handle WebSocket events
